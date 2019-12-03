@@ -130,6 +130,11 @@ nomnom@1.5.2:
     chalk "~0.4.0"
     underscore "~1.6.0"
 
+safe-types@^4.25.0:
+  version "4.25.0"
+  resolved "https://registry.yarnpkg.com/safe-types/-/safe-types-4.25.0.tgz#bed0dcab3b8a88152e04623e46c97b182474adca"
+  integrity sha512-QaRNo0w2Tr8KVoNTe5Glw2SpOxA+5xsEhbrt26wRRkQjAI5M6ENxfxakZDRS5tPFDED6PncjY5iguXvMAAW8mQ==
+
 source-map@~0.1.33:
   version "0.1.43"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.1.43.tgz#c24bc146ca517c1471f5dacbe2571b2b7f9e3346"
