@@ -1,6 +1,6 @@
 {
   "name": "@brigand/n1ql",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "parse couchbase's n1ql syntax",
   "main": "lib/index.js",
   "author": "Frankie Bagnardi <f.bagnardi@gmail.com>",
