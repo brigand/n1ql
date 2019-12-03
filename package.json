@@ -1,0 +1,16 @@
+{
+  "name": "@brigand/n1ql",
+  "version": "0.0.0",
+  "description": "parse couchbase's n1ql syntax",
+  "main": "lib/index.js",
+  "author": "Frankie Bagnardi <f.bagnardi@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "jison src/n1ql.y src/n1ql.l -o lib/n1ql.js -m commonjs",
+    "test": "node scripts/test"
+  },
+  "private": false,
+  "devDependencies": {
+    "jison": "^0.4.18"
+  }
+}
