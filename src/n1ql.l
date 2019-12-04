@@ -10,7 +10,6 @@ https://github.com/couchbaselabs/tuqtng/blob/e490c376be9971daa7524b034156ab64ed8
                     yy.logDebugTokens("STRING - %s", yytext);
                     return 'STRING';
                   }
-
 \'((\\\")|(\\\\)|(\\\/)|(\\b)|(\\f)|(\\n)|(\\r)|(\\t)|(\\u[0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F])|[^''])*\'     {
                     yytext = yytext.substr(1,yyleng-2);
                     yy.logDebugTokens("STRING - %s", yytext);
@@ -297,10 +296,11 @@ https://github.com/couchbaselabs/tuqtng/blob/e490c376be9971daa7524b034156ab64ed8
                     return 'INT';
                   }
 [ \t\n]+        { yy.logDebugTokens("WHITESPACE (count=%d)", yytext.length); /* eat up whitespace */ }
-[a-zA-Z_][a-zA-Z0-9\-_]*     {
+[a-zA-Z_][a-zA-Z0-9\-_:]*     {
                     yy.logDebugTokens("IDENTIFIER - %s", yytext);
                     return 'IDENTIFIER';
                   }
+/`((\\\")|(\\\\)|(\\\/)|(\\b)|(\\f)|(\\n)|(\\r)|(\\t)|(\\u[0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F])|[^`])+`/
 `((\\\")|(\\\\)|(\\\/)|(\\b)|(\\f)|(\\n)|(\\r)|(\\t)|(\\u[0-9a-fA-F][0-9a-fA-F][0-9a-fA-F][0-9a-fA-F])|[^`])+`
                   {
                     //this rule allows for a wider range of identifiers by escaping them

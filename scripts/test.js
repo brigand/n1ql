@@ -5,6 +5,7 @@ const parse = require('../lib/')
 const items = [
   { query: 'SELECT * FROM foo where id = "123"', pass: true},
   { query: 'SELECT */ FROM foo where id = "123"', pass: false},
+  { query: 'SELECT * FROM system:indexes', pass: true},
   { query: 'SELECT * from foo where id = "123"', pass: true},
 ]
 
